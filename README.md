@@ -45,7 +45,26 @@ Each file consists of an array of objects containing the texts and links of the 
 - **Unidecode**: For ASCII transliterations of Unicode text.
 - **Streamlit**: For turning data scripts into shareable web apps.
 
+## Usage
+
+To run the project, execute the main Python file from the terminal as follows:
+
+1. Load the Needed Libraries:
+   
+```pip install -r .\requirements.txt``` 
+
 ----------
+2.  Directly, To see the **accuracy scores both train and test:**
+   
+```python text_preprocessing.py```
+
+----------
+3. To use and test the algorithm:
+   
+```streamlit run main.py```
+
+----------
+
 ## Contributing
 Those who wish to contribute can send pull requests or open issues to solve existing problems.
 
