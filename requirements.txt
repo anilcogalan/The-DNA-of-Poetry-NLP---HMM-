@@ -1,0 +1,8 @@
+pandas
+selenium
+nltk
+scikit-learn
+TurkishStemmer
+unidecode
+streamlit
+

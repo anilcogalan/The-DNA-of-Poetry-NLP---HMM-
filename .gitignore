@@ -1,0 +1,7 @@
+.web_scraping/
+.venv/
+__pycache__/
+.idea/
+*.pyc
+*.pyo
+.DS_Store
