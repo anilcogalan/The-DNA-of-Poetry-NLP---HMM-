@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 from classifier import Classifier
 from helpers import df_col_drop,preprocess_text,text_to_int, initialize_and_compute_matrices,compute_and_normalize_counts
 
-# nltk.download('stopwords') # İlk kullanımda etkinleştirilmelidir.
+# nltk.download('stopwords')
 
 df_cy = pd.read_json("data/poems_cy.json")
 df_nh = pd.read_json("data/poems_nh.json")
@@ -45,13 +45,9 @@ X_test_int = [text_to_int(text, word2idx) for text in X_test]
 
 A0, pi0, A1, pi1 = initialize_and_compute_matrices(X_train, y_train, word2idx)
 
-# A ve pi matrisleri için hesaplama ve normalizasyonu birleştirilmiş fonksiyon
-
-
 logA0, logpi0 = compute_and_normalize_counts([t for t, y in zip(X_train, y_train) if y == 0],word2idx,token, A0, pi0)
 logA1, logpi1 = compute_and_normalize_counts([t for t, y in zip(X_train, y_train) if y == 1],word2idx,token, A1, pi1)
 
-# Sınıf öncüllerini hesapla
 count0 = sum(y_train == 0)
 count1 = sum(y_train == 1)
 total = len(y_train)
