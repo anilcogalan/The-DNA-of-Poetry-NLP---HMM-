@@ -58,7 +58,7 @@ logA1, logpi1 = compute_and_normalize_counts([t for t, y in zip(X_train, y_train
 clf = Classifier([logA0, logA1], [logpi0, logpi1],
                  np.log([sum(y_train == 0) / len(y_train), sum(y_train == 1) / len(y_train)]))
 
-if st.button('Sınıflandır'):
+if st.button('Classify'):
 
     processed_input = preprocess_text(user_input)
     input_int = text_to_int(processed_input, word2idx)
