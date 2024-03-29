@@ -1,4 +1,8 @@
 # The-DNA-of-Poetry (NLP-HMM)
+-----------
+![image](https://github.com/anilcogalan/The-DNA-of-Poetry-NLP---HMM-/assets/61653147/0d4301d3-ad68-49cf-b849-8e4eed1bd79e)
+
+----------
 
 This project is a Natural Language Processing (NLP) application developed to classify Turkish poems according to two different poets or periods. The project processes the text of poems and predicts which category each poem belongs to using machine learning techniques. The poem data was collected using Selenium, showcasing the capability to scrape complex web data for NLP tasks.
 
