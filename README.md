@@ -41,7 +41,6 @@ Each file consists of an array of objects containing the texts and links of the 
 - **Pandas**: For data manipulation and analysis.
 - **Selenium**: For automating web browsers to scrape poem data.
 - **NLTK**: For natural language processing tasks such as text preprocessing.
-- **Scikit-learn**: For implementing machine learning algorithms.
 - **TurkishStemmer**: For stemming Turkish texts to their root forms.
 - **Unidecode**: For ASCII transliterations of Unicode text.
 - **Streamlit**: For turning data scripts into shareable web apps.
