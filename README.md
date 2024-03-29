@@ -4,7 +4,7 @@
 
 ----------
 
-This project is a Natural Language Processing (NLP) application developed to classify Turkish poems according to two different poets or periods. The project processes the text of poems and predicts which category each poem belongs to using machine learning techniques. The poem data was collected using Selenium, showcasing the capability to scrape complex web data for NLP tasks.
+This project is a Natural Language Processing (NLP) application developed to classify Turkish poems according to two different poets who are Can Yücel and Nazım Hikmet. The project processes the text of poems and predicts which category each poem belongs to using HMM techniques. The poem data was collected using Selenium, showcasing the capability to scrape complex web data for NLP tasks.
 
 
 ## Installation
