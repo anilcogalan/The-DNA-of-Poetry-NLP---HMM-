@@ -23,29 +23,27 @@ def text_to_int(text, word2idx):
     tokens = text.split()
     return [word2idx.get(token, 0) for token in tokens]  # <unk> için 0 kullanılır
 def initialize_and_compute_matrices(X_train, y_train, word2idx):
-    V = len(word2idx)  # Sözlük büyüklüğü
+    V = len(word2idx) 
 
-    # Laplace düzeltmesi ile matrislerin başlatılması
-    A0 = np.ones((V, V))  # Sınıf 0 için geçiş matrisi
-    pi0 = np.ones(V)  # Sınıf 0 için başlangıç olasılık vektörü
+    A0 = np.ones((V, V))
+    pi0 = np.ones(V) 
 
-    A1 = np.ones((V, V))  # Sınıf 1 için geçiş matrisi
-    pi1 = np.ones(V)  # Sınıf 1 için başlangıç olasılık vektörü
+    A1 = np.ones((V, V))
+    pi1 = np.ones(V) 
 
-    # Matrisleri doldurma
     for text, label in zip(X_train, y_train):
         tokens = text.split()
-        indices = [word2idx.get(token, 0) for token in tokens]  # Sözlükte olmayan kelimeler için <unk>
+        indices = [word2idx.get(token, 0) for token in tokens]
 
         for i in range(len(indices) - 1):
             if label == 0:
                 A0[indices[i], indices[i + 1]] += 1
-                pi0[indices[0]] += 1  # İlk kelimenin olasılığını artır
+                pi0[indices[0]] += 1
             else:
                 A1[indices[i], indices[i + 1]] += 1
-                pi1[indices[0]] += 1  # İlk kelimenin olasılığını artır
+                pi1[indices[0]] += 1
 
-    # Olasılıkları normalize etme
+    
     A0 /= A0.sum(axis=1, keepdims=True)
     pi0 /= pi0.sum()
 
